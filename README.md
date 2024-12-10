@@ -21,15 +21,25 @@ Este projeto é uma aplicação RESTful desenvolvida com **Spring Boot** para ge
 - **Spring Boot**: Framework para desenvolvimento rápido de aplicações Java.
 - **Spring Data JPA**: Para integração com o banco de dados.
 - **Banco de Dados H2**: Banco de dados em memória para facilitar o desenvolvimento e testes.
+- **MockMvc**: Para simular chamadas aos endpoints REST e validar respostas.
 
 ---
+
+## 🧪 **Testes de Integração**
+Este projeto inclui testes de integração para validar o comportamento dos endpoints REST em um ambiente controlado, utilizando o contexto real do Spring Boot. Os testes foram configurados com:
+
+Banco de Dados H2: Para simular o banco de dados em memória durante os testes.
+MockMvc: Para realizar chamadas HTTP simuladas e verificar as respostas.
+Cobertura de cenários como:
+Criação de uma pessoa com endereços.
+Listagem de pessoas e endereços.
 
 ## 📂 Estrutura do Projeto
 
 ```
 src/
 ├── main/
-│   ├── java/com/seuprojeto/
+│   ├── java/com/crud.gabriel/
 │   │   ├── controller/       # Controladores REST
 │   │   ├── entity/            # Entidades Pessoa e Endereço
 │   │   ├── repository/       # Repositórios JPA
@@ -37,6 +47,8 @@ src/
 │   └── resources/
 │       ├── application.yml # Configurações da aplicação
 └── test/                    # Testes unitários e de integração
+│   ├── java/com/crud.gabriel/  # Testes de integração
+│   │   ├── PessoaControllerTest.java
 ```
 
 ---
